@@ -12,6 +12,7 @@ function Navbar({ inputValue, setvalue, getdata }) {
 
       <div className="flex items-center">
         <CiSearch size={25} className="text-white relative left-3" />
+        <form action="submit">
         <input
           type="text"
           placeholder="Search latest news"
@@ -19,17 +20,17 @@ function Navbar({ inputValue, setvalue, getdata }) {
           onChange={(e) => setvalue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
-              getdata()
+              getdata();
             }
           }}
           className="border text-white p-2 pl-12 w-full ml-[-1.5rem] rounded-full outline-none md:w-[30rem] "
         />
+        </form>
       </div>
       <button className="text-sm border border-neutral-500 bg-neutral-700/50 w-20 flex justify-center items-center h-10 text-white rounded-xl md:block hidden">
-          Sign in
-        </button>
+        Sign in
+      </button>
     </div>
-
   );
 }
 
