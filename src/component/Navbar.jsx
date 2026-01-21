@@ -12,7 +12,7 @@ function Navbar({ inputValue, setvalue, getdata }) {
 
       <div className="flex items-center">
         <CiSearch size={25} className="text-white relative left-3" />
-        <form action="submit">
+        <form action="submit" >
         <input
           type="text"
           placeholder="Search latest news"
@@ -20,6 +20,7 @@ function Navbar({ inputValue, setvalue, getdata }) {
           onChange={(e) => setvalue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
+              e.preventDefault()
               getdata();
             }
           }}

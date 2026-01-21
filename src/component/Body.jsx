@@ -21,6 +21,8 @@ function Body() {
       .catch(() => console.log("error"));
   };
 
+
+
   return (
     <>
       <Navbar
